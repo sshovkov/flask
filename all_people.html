@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <button onclick="goToHome()">Go to Home Screen</button>
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+      
+      <table>
+         <thead>
+            <tr>
+               <th>First name</th>
+               <th>Last name</th>
+               <th>Email</th>
+               <th>Age</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for person in people %}
+               <tr>
+                  <td>{{ person.first_name }}</td>
+                  <td>{{ person.last_name }}</td>
+                  <td>{{ person.email }}</td>
+                  <td>{{ person.age }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      <script>
+         function goToHome() {
+           window.location.href = '/';
+         }
+       </script>
+   </body>
+</html>

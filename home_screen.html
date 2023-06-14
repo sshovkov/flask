@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Screen</title>
+</head>
+<body>
+  <h1>Person Records Home Screen</h1>
+    <!-- Show All Button -->
+    <button onclick="showAll()">All people</button>
+
+    <!-- New Form Button -->
+    <button onclick="getNewForm()">New person</button>
+  
+    <!-- Delete Button -->
+    <button onclick="deleteAction()">Delete a person</button>
+  
+    <script>
+      // New Person Button Action
+      function getNewForm() {
+        window.location.href = '/new';
+      }
+  
+      // Delete Button Action
+      function deleteAction() {
+          window.location.href = '/delete';
+      }
+  
+      // Show All Button Action
+      function showAll() {
+          window.location.href = '/all';
+      }
+    </script>
+</body>
+</html>
